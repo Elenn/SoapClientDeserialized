@@ -3,7 +3,7 @@
 *********************************************************************
 soap c# how to get .xsd
 *********************************************************************
-1. wsdl: беру часть между и сохраняю с расширением .xsd
+1. wsdl: беру часть между <wsdl:types> и сохраняю с расширением .xsd
 
 https://apps.learnwebservices.com/services/hello?WSDL
 
@@ -12,6 +12,7 @@ https://apps.learnwebservices.com/services/hello?WSDL
 
 servicesHello.xsd
 
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://learnwebservices.com/services/hello" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://learnwebservices.com/services/hello" version="1.0">
 	<xs:complexType name="helloRequest">
@@ -27,6 +28,7 @@ servicesHello.xsd
 	<xs:element name="HelloRequest" nillable="true" type="helloRequest"/>
 	<xs:element name="HelloResponse" nillable="true" type="helloResponse"/>
 </xs:schema>
+```
 -----------------------------------------------------------
 3. 
 Создаю классы из servicesHello.xsd
